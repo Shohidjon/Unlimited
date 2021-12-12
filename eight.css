@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center !important;
+  }
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+}
+.svgBox {
+    width: 300px;
+    height: 200px;
+}
+
+.svgBox svg{
+    fill: none;
+    stroke-width: 10;
+    transform: scale(2);
+    stroke: url(#col);
+    stroke-dasharray: 60 172;
+    stroke-linecap: round;
+    animation: oj 4s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes oj{
+    0%{
+        stroke-dashoffset:0;
+    }
+    100%{
+        stroke-dashoffset:232;
+    }
+}
+
+.svgBox svg:nth-of-type(1){
+    animation: none;
+    stroke: #222;
+    stroke-dasharray: none;
+}
+
+.svgBox svg:nth-of-type(2){
+    filter: blur(1px);
+}
